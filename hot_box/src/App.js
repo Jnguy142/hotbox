@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Chatbox from './chat_components/Chatbox'
 
 class App extends Component {
   render() {
@@ -9,6 +9,7 @@ class App extends Component {
         <div className="App-header">
           <h2>Welcome to HoTBoX Chat Client</h2>
         </div>
+        <Chatbox />
       </div>
     );
   }
