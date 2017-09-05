@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Chatbox from './chat_components/Chatbox'
-
 class App extends Component {
   render() {
     return (
