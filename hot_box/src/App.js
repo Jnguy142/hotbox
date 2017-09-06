@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Chatbox from './chat_components/Chatbox'
+import Messagebox from './send_components/messageBox'
 
 class App extends Component {
   constructor (props) {
@@ -35,6 +36,7 @@ class App extends Component {
         </div>
         <div className='chat-container' onClick={this.getAllMessages.bind(this)}>
           <Chatbox messages={this.state.messages} />
+          <Messagebox />
         </div>
       </div>
     );
