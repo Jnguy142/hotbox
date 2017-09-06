@@ -2,15 +2,14 @@
   margin: 0;
   padding: 0;
   display: flex;
-  width: 500px;
-  min-width: 390px;
+  max-width: 500px;
   height: 600px;
   margin: auto;
 
 }
 
 .send-button {
-  height: 75px;
+  height: 50px;
   border-radius: 5px;
   font-family: Arial;
   color: #ffffff;

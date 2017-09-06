@@ -1,10 +1,10 @@
+*{ box-sizing: border-box; }
+
 .chatbox {
   margin: 0;
   padding: 0;
   font-family: tahoma, sans-serif;
-  box-sizing: border-box;
-  width: 500px;
-  min-width: 390px;
+  max-width: 500px;
   height: 600px;
   background: #fff;
   padding: 25px;
