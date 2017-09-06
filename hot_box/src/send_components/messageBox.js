@@ -5,8 +5,8 @@ class Messagebox extends Component {
   render () {
     return (
       <div className='chat-form'>
-        <textarea></textarea>
-        <button className='send-button'>Send</button>
+        <textarea className='user-message'></textarea>
+        <button className='send-button' onClick={this.props.handleSendButton}>Send</button>
       </div>
     );
   }

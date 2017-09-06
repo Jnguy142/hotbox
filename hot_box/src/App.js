@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Chatbox from './chat_components/Chatbox'
 import Messagebox from './send_components/messageBox'
+import jquery from 'jquery'
 
 class App extends Component {
   constructor (props) {
@@ -27,6 +28,15 @@ class App extends Component {
     }).catch(res => console.log(res));
 
   }
+  
+  sendMessage () {
+    var context = this;
+    var message = jquery('.user-message').val();
+    var messageToSend = {username: 'meme Lord', message: message};
+    this.props.send_message(messageToSend)
+    .then(context.getAllMessages())
+    .catch(res => console.log(res));
+  }
 
   render() {
     return (
@@ -36,7 +46,7 @@ class App extends Component {
         </div>
         <div className='chat-container' onClick={this.getAllMessages.bind(this)}>
           <Chatbox messages={this.state.messages} />
-          <Messagebox />
+          <Messagebox handleSendButton={this.sendMessage.bind(this)}/>
         </div>
       </div>
     );
