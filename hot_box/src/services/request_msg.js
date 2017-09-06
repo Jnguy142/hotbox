@@ -1,16 +1,6 @@
-import jQuery from 'jquery';
+import axios from 'axios';
 var get_messages = function () {
-  
-  console.log('hi');
-  jQuery.ajax('http://chattercube.thirdtape.com/messages',{
-    type: 'GET',
-    success: function (data) {
-      console.log(data);
-    },
-    error: function () {
-      console.log('failed get request');
-    }
-  });
+  return axios.get('http://chattercube.thirdtape.com/messages');
 };
 
 export default get_messages;

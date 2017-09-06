@@ -1,14 +1,20 @@
 import React, { Component } from 'react'
 import Chatlogs from './Chatlogs'
 import './chatbox.css'
-import get_messages from '../services/request_msg.js'
 class Chatbox extends Component {
+  constructor (props) {
+    super(props);
+  }
+
   render () {
     return (
-      <div className="chatbox" onClick={get_messages}>
+      <div className="chatbox" >
         <div className="chatlogs">
-          <Chatlogs />
-          <Chatlogs />
+          {
+            this.props.messages.map(function (message) {
+              return <Chatlogs message={message} />
+            })
+          }
         </div>
       </div>
     );
