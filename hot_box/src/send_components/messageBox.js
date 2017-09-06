@@ -5,8 +5,11 @@ class Messagebox extends Component {
   render () {
     return (
       <div className='chat-form'>
-        <textarea className='user-message'></textarea>
+        <div>username: 
+          <input className='user-name-field'></input>
+        </div>
         <button className='send-button' onClick={this.props.handleSendButton}>Send</button>
+        <textarea className='user-message'></textarea>
       </div>
     );
   }

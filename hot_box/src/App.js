@@ -32,7 +32,8 @@ class App extends Component {
   sendMessage () {
     var context = this;
     var message = jquery('.user-message').val();
-    var messageToSend = {username: 'meme Lord', message: message};
+    var username = jquery('.user-name-field').val();
+    var messageToSend = {username: username, message: message};
     this.props.send_message(messageToSend)
     .then(context.getAllMessages())
     .catch(res => console.log(res));
